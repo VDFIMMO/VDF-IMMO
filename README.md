@@ -1,4 +1,3 @@
-# VDF-IMMO
 document.addEventListener("DOMContentLoaded", () => {
   const biensContainer = document.getElementById("biens-container");
   const filtreForm = document.getElementById("filtre-form");
@@ -30,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
   boutonReset.addEventListener("click", () => {
     filtreForm.reset();
     afficherBiens(allBiens);
-    compteurResultats.textContent = Total : ${allBiens.length} biens trouvés;
-    history.replaceState(null, '', #resultats=${allBiens.length});
+    compteurResultats.textContent = `Total : ${allBiens.length} biens trouvés`;
+    history.replaceState(null, '', `#resultats=${allBiens.length}`);
   });
 
   function filtrerBiens() {
@@ -58,8 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
     afficherBiens(resultats);
-    compteurResultats.textContent = ${resultats.length} bien(s) trouvé(s);
-    history.replaceState(null, '', #resultats=${resultats.length});
+    compteurResultats.textContent = `${resultats.length} bien(s) trouvé(s)`;
+    history.replaceState(null, '', `#resultats=${resultats.length}`);
   }
 
   function afficherBiens(biens) {
